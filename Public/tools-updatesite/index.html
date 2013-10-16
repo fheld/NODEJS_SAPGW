@@ -1,0 +1,146 @@
+<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
+<html>
+<head>
+<title>UI5 Update Site</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script id="sap-ui-bootstrap" type="text/javascript"
+    src="/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_goldreflection"
+    data-sap-ui-libs="sap.ui.commons,sap.ui.ux3">
+	
+</script>
+
+<style type="text/css">
+#updatesite_content ol {
+    padding-top: 0.5em;
+}
+
+#updatesite_content li {
+    padding-bottom: 0.6em;
+}
+
+#sdk_content ol {
+    padding-top: 0.5em;
+}
+
+#sdk_content li {
+    padding-bottom: 0.6em;
+}
+</style>
+
+<script type="text/javascript">
+	var oShell = new sap.ui.ux3.Shell(
+			"toolsShell",
+			{
+				appIcon : "/resources/sap/ui/commons/themes/sap_goldreflection/img/applicationheader/SAPLogo.png",
+				appTitle : "SAP development Toolkit for HTML5",
+				showInspectorTool : false,
+				showFeederTool : false,
+				showSearchTool : false,
+				showLogoutButton : false,
+				worksetItems : [ // add some items to the top navigation
+				new sap.ui.ux3.NavigationItem({
+					key : "tab_tools",
+					text : "Tools"
+				})]
+			});
+
+
+
+	function createMenuItem(id, text) {
+		return new sap.ui.commons.MenuItem({
+			id : id,
+			text : text
+		});
+	}
+
+	function createLink(id, text, uri) {
+		return new sap.ui.core.HTML(
+				id,
+				{
+					content : "<a href='" + uri
+                    + "' target='_blank' class='sapUiLnk' style='color:#f2f2f2; font-size: 12px;'>"
+							+ text + "</a>"
+				});
+	}
+
+	function createText(id, text) {
+		return new sap.ui.core.HTML(id, {
+			content : "<span class='sapUiTv' title='"+ text +"'>" + text
+					+ "</span>"
+		});
+	}
+
+	function readCookie(name) {
+		var cookies = document.cookie.split(';');
+		for ( var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i];
+			var cookieKeyValue = cookie.split('=');
+			if (ltrim(cookieKeyValue[0]) == name) {
+				return cookieKeyValue[1];
+			}
+		}
+	}
+
+	function ltrim(str) {
+		while (str.charAt(0) == ' ') {
+			str = str.substr(1)
+		}
+		return str;
+	}
+
+	var userName = readCookie("username");
+	if (userName != null) {
+		oShell.addHeaderItem(createText("text_user", userName))
+	}
+
+	oShell.addHeaderItem(createLink("link_docs", "Documentation",
+			"https://sapui5.netweaver.ondemand.com/sdk/"));
+
+	var updatesite_content_html = new sap.ui.core.HTML("updatesite_content");
+	var sdk_content_html = new sap.ui.core.HTML("sdk_content");
+	oShell.setContent(updatesite_content_html);
+
+	oShell.attachWorksetItemSelected(function(oEvent) {
+		var key = oEvent.getParameter("key");
+		if (key == "tab_tools") {
+			oShell.setContent(updatesite_content_html);
+		} 
+	});
+
+	oShell.placeAt("shellArea");
+</script>
+
+</head>
+
+
+<body class="sapUiBody">
+    <div id="shellArea">
+        <div id="updatesite_content"
+            style='-webkit-user-select: auto; user-select: auto'>
+            
+            <h3>UI Development Toolkit for HTML5</h3>
+                        <p>UI Development Toolkit for HTML5 is available with SAP NetWeaver UI Extensions 1.0.</p>
+			<p>For official detailed download and installation instructions see the <a href="https://service.sap.com/sap/support/notes/1747308" target="_blank">SAP Note 1747308</a> and the installation guide attached on this SAP Note. </p>
+			<p>To start developing applications with the UI Development Toolkit for HTML5 please follow these steps:</p>
+            <ol>
+                <li>
+					Download and install the Eclipse IDE for Java EE Developers separately from <a href="http://www.eclipse.org/downloads/" target="_blank">Eclipse</a>
+				</li>
+<li>
+					Install the Eclipse feature "Jetty - Core: servlets and webapps" separately from the 
+                                        <a href="http://download.eclipse.org/releases/juno" target="_blank">Eclipse Juno update site</a>
+				</li>
+				<li>
+					Install the UI Development Toolkit for HTML5 as described in the installation guide.<br />  
+				</li>
+			</ol>
+
+For documentation on the latest version of the UI Development Toolkit for HTML5, see the <a href="https://sapui5.netweaver.ondemand.com/sdk/" target="_blank">DemoKit</a> 
+            
+        </div>
+
+    </div>
+</body>
+</html>

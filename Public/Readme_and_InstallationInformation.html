@@ -1,0 +1,524 @@
+<html>
+
+	<head>
+	<title>Welcome to SAPUI5</title>
+
+	<style>
+
+	body {
+		padding: 0px;
+		margin: 0px;
+		font-family: Calibri,Tahoma,Verdana,Arial,Helvetica,sans-serif;
+		background: #ffffff; /* Old browsers */
+		background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 62%, #f5f5f5 70%, #f2f2f2 71%, #f0f0f0 73%, #eeeeee 73%, #eeeeee 74%, #ececec 75%, #ececec 76%, #e9e9e9 76%, #e5e5e5 80%, #e2e2e2 80%, #e0e0e0 82%, #dedede 82%, #dedede 83%, #dcdcdc 84%, #dcdcdc 85%, #dadada 85%, #d5d5d5 89%, #d3d3d3 89%, #d3d3d3 91%, #d1d1d1 91%, #d0d0d0 91%, #cccccc 96%, #cfcfcf 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(62%,#ffffff), color-stop(70%,#f5f5f5), color-stop(71%,#f2f2f2), color-stop(73%,#f0f0f0), color-stop(73%,#eeeeee), color-stop(74%,#eeeeee), color-stop(75%,#ececec), color-stop(76%,#ececec), color-stop(76%,#e9e9e9), color-stop(80%,#e5e5e5), color-stop(80%,#e2e2e2), color-stop(82%,#e0e0e0), color-stop(82%,#dedede), color-stop(83%,#dedede), color-stop(84%,#dcdcdc), color-stop(85%,#dcdcdc), color-stop(85%,#dadada), color-stop(89%,#d5d5d5), color-stop(89%,#d3d3d3), color-stop(91%,#d3d3d3), color-stop(91%,#d1d1d1), color-stop(91%,#d0d0d0), color-stop(96%,#cccccc), color-stop(100%,#cfcfcf)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 62%,#f5f5f5 70%,#f2f2f2 71%,#f0f0f0 73%,#eeeeee 73%,#eeeeee 74%,#ececec 75%,#ececec 76%,#e9e9e9 76%,#e5e5e5 80%,#e2e2e2 80%,#e0e0e0 82%,#dedede 82%,#dedede 83%,#dcdcdc 84%,#dcdcdc 85%,#dadada 85%,#d5d5d5 89%,#d3d3d3 89%,#d3d3d3 91%,#d1d1d1 91%,#d0d0d0 91%,#cccccc 96%,#cfcfcf 100%); /* Chrome10+,Safari5.1+ */
+		background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 62%,#f5f5f5 70%,#f2f2f2 71%,#f0f0f0 73%,#eeeeee 73%,#eeeeee 74%,#ececec 75%,#ececec 76%,#e9e9e9 76%,#e5e5e5 80%,#e2e2e2 80%,#e0e0e0 82%,#dedede 82%,#dedede 83%,#dcdcdc 84%,#dcdcdc 85%,#dadada 85%,#d5d5d5 89%,#d3d3d3 89%,#d3d3d3 91%,#d1d1d1 91%,#d0d0d0 91%,#cccccc 96%,#cfcfcf 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #ffffff 0%,#ffffff 62%,#f5f5f5 70%,#f2f2f2 71%,#f0f0f0 73%,#eeeeee 73%,#eeeeee 74%,#ececec 75%,#ececec 76%,#e9e9e9 76%,#e5e5e5 80%,#e2e2e2 80%,#e0e0e0 82%,#dedede 82%,#dedede 83%,#dcdcdc 84%,#dcdcdc 85%,#dadada 85%,#d5d5d5 89%,#d3d3d3 89%,#d3d3d3 91%,#d1d1d1 91%,#d0d0d0 91%,#cccccc 96%,#cfcfcf 100%); /* W3C */
+		background-repeat: no-repeat;
+	}
+
+	h2 {
+		margin: 8px 0px 5px 0px;
+	}
+
+	h3 {
+		margin: 18px 0px 3px 0px;
+	}
+
+	ul {
+		margin-top: 3px;
+		margin-bottom: 6px;
+	}
+
+	#banner-div {
+		border-bottom: 5px solid gray;
+		height: 51px;
+		padding-left: 15px;
+	}
+
+	#content {
+		padding: 15px;
+	}
+
+	#preview {
+		height: 70px;
+		-moz-border-radius: 6px;
+		border: 1px solid #AAAAAA;
+	}
+
+	#footer {
+		clear: both;
+		font-size: 9pt;
+		position: fixed;
+		bottom: 1px;
+		left: 45%;
+		margin-top: 20px;
+		text-align: center;
+	}
+	pre {
+		
+		padding: 1em;
+		background-color: white;
+		border: 1px solid #ccc;		
+		float: left;
+	}
+	
+	table {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	td {
+		border: 1px solid black;
+		padding: 6px;
+	}
+
+	</style>
+	</head>
+	<body>
+		<div id="banner-div" width="100%">
+			<h1 style="display: inline; color: gray; margin: 0pt; position: absolute; top: 8px;">SAP<span style="color:#EFAA00;">UI5</span> - UI development toolkit for HTML5 Version 1.12.1 -- Installation Information</h1>
+		</div>
+		<div id="content">
+			<h2>SAPUI5 Evaluation</h2>
+			Welcome to SAPUI5! <br/>Thank you for downloading the SAPUI5 &quot;Evaluation&quot; version.<br/>
+
+			<h3>Introduction</h3>
+			SAPUI5 is a state-of-the-art client-side rendering framework that:
+			<ul>
+				<li>... provides RIA-style AJAX features</li>
+				<li>... supports the SAP product standards</li>
+				<li>... offers an extensibility concept</li>
+				<li>... allows theming and customer branding</li>
+				<li>... comes with a rich set of controls for building desktop as well as mobile applications</li>
+				<li>... introduces controls that work on all form factors</li>
+				<li>... provides a lightweight model-view-controller (MVC) concept, componentization and data binding</li>
+				<li>... has out-of-the-box support for the OData protocol</li>
+				<li>... implements advanced caching and resource handling mechanisms</li>
+				<li>... allows on-the-fly creation of new controls</li>
+				<li>... provides an Eclipse based design environment for development of SAPUI5 applications</li>
+				<li>... is release independent with very few dependencies to other components</li>
+			</ul>
+			<p>SAPUI5 is based on HTML5 and CSS3, so it should run on all modern browsers. Currently supported are Internet Explorer 9 (and - with some visual degradations IE8), the latest versions of Chrome, Firefox and (on Mac OS) Safari</p>
+			</ul>
+			
+			<h3><a name="new">What's new in version 1.12?</a></h3>
+			These are the highlights of SAPUI5's new evaluation version as opposed to the 1.8 version:
+			<ul>
+				<li>Components: One can bundle UI5 related objects like modules, views, controllers, etc. in components</li>
+				<li>New view type: Declarative HTML, this is also included in SAPUI5 Eclipse tools</li>
+				<li>New desktop controls like 
+				<ul>
+					<li>Form, ResponsiveLayout, Autocomplete, Collection Inspector, FormattedTextView</li>
+					<li>Notetaker, DateRangeSlider, SplitButton</li>
+				</ul>
+				<li>Best practices mobile demo application</li>
+				<li>All mobile (sap.m) controls which are not experimental support Blackberry 10</li> 
+				<li>New mobile controls like
+					<ul>
+						<li>SplitApp, PullToRefresh, MessageToast, MessageBox, ActionSheet, InputDateTime</li>
+					</ul>
+				<li>New experimental mobile controls like
+				<ul>
+					<li>TileContainer, TabularList, Shell, Accept/Reject Switch, GrowingList, IconTabBar, ActionSheet</li>
+					<li>DateTimeInput, Link, ObjectHeader, TextArea, URLHelper</li>
+					<li>Calendar, ProgressIndicator, TabContainer</li>
+				</ul>	
+				<li>New mobile features</li>
+				<ul>
+					<li>Configurable/themable background images for App, SplitApp, Shell (experimental)</li>
+					<li>Swipe-for-action in Lists</li>
+				<li>Mobile library comes with new experimental Blue Crystal theme</li>	
+				<li>Mobile library with Blue Crystal theme runs on smart phones, tablets and desktops. This is only an experimental feature</li>							
+				<li>Charts in sap.viz library
+				<ul>
+					<li>Basic touch support</li>
+					<li>New charts: Dual Bar, Dual Line, Dual Combination, Dual Column, Dual Stacked Bar
+				</ul>
+				<li>New Icon fonts / pool</li>
+				<li>sap.ui.Device: API for device and feature detection and media query support</li>
+				<li>Calculated fields in databinding, i.e. bind control properties to more than one data property</li> 			
+			</ul>
+			
+			<h3>Contents of the Downloaded Archive</h3>
+			The archive that you downloaded and which contains this <i>readme.html</i>-page is comprised of several parts related to the SAPUI5 Framework. The parts are:
+
+	 		<p>
+		 		<b>"SAPUI5 SDK Static", the SAPUI5 SDK - SAPUI5 runtime, controls & documentation, deployable on any web server</b>
+		 		<ul>
+		 			<li>This archive can be unzipped to any webserver's documents folder, e.g. to htdocs of <i>Apache.org</i>'s HTTPD or wwwroot from <i>Microsoft</i>'s IIS.<br/><a href="http://httpd.apache.org/">Homepage of Apache's HTTP server</a></li>
+					<li>Get the <a href="sapui5-sdk-static.zip">SAPUI5 static SDK ZIP file</a></li>
+				</ul>
+		 		
+	 		</p>
+	 		<p>
+		 		<b>"SAPUI5 SDK", the SAPUI5 SDK - SAPUI5 runtime, controls & documentation, deployable on Java Web Containers</b>
+		 		<ul>
+		 			<li>This archive can be used for direct deployment on a Java Web Container like <i>Apache.org</i>'s Tomcat.<br/><a href="http://tomcat.apache.org/">Homepage of Apache's Tomcat</a></li>
+					<li>Get the <a href="sapui5-sdk.war">SAPUI5 SDK file</a></li>
+				</ul>
+		 		
+	 		</p>
+	 		<p>
+		 		<b>SAPUI5 runtime Static - SAPUI5 runtime & controls, deployable on any web server</b>
+		 		<ul>
+		 			<li>This archive can be unzipped to any webserver's documents folder, e.g. to htdocs of <i>Apache.org</i>'s HTTPD or wwwroot from <i>Microsoft</i>'s IIS.<br/><a href="http://httpd.apache.org/">Homepage of Apache's HTTP server</a></li>
+					<li>Get the <a href="sapui5-static.zip">SAPUI5 runtime static ZIP file</a></li>
+				</ul>
+		 		
+	 		</p>
+	 		<p>
+		 		<b>SAPUI5 runtime - SAPUI5 runtime & controls, deployable on Java Web Containers</b>
+		 		<ul>
+		 			<li>This archive can be used for direct deployment on a Java Web Container like <i>Apache.org</i>'s Tomcat. <br/><a href="http://tomcat.apache.org/">Homepage of Apache's Tomcat</a></li>
+					<li>Get the <a href="sapui5.war">SAPUI5 runtime WAR file</a></li>
+				</ul>	
+	 		</p>
+	 		<p>
+		 		<b>SAPUI5 runtime for hybrid web containers - SAPUI5 runtime & mobile controls, deployable on Hybrid Web Containers</b>
+		 		<ul>
+		 			<li>This archive can be used for direct deployment on a hybrid web container like <i>Adobe</i>'s PhoneGap. <br/><a href="http://phonegap.com/">Homepage of Adobe's PhoneGap</a></li>
+					<li>Get the <a href="sapui5-mobile-static.zip">SAPUI5 mobile runtime WAR</a></li>
+				</ul>	
+	 		</p>			
+	 		<p>
+	 			<b>Sample application</b>
+				<ul>
+					<li>This archive contains a primitive sample application, used throughout the documentation. Can be installed in a Java Web Container</li>
+					<li>Get the <a href="getting-started-sample.war">sample application</a></li>
+				</ul>
+	 		</p>
+	 		<p>
+	 			<b>SAPUI5 Application Development Tool</b>
+				<ul>
+					<li>This folder contains a version of the SAPUI5 Application Development Tool. The Eclipse plugin based tool provides wizards to create application projects and views according to the SAPUI5 Model-View-Controller concept, supports the developer with JavaScript code completion for the SAPUI5 controls and offers an in-place preview.</li>
+					<li>Get the <a href="tools-updatesite">tools-updatesite</a></li>
+				</ul>
+	 		</p>
+
+			
+			<h2>SAPUI5 Installation</h2>
+<p>To use the archives you have downloaded, follow the installation information.</p>
+<p>The installation section here is set up according to the various file packages sapui5-sdk-static.zip, sapui5-sdk.war, sapui5-static.zip, sapui5.war, and getting-started-sample.war as they are provided with the downloaded archive for using SAPUI5.</p>
+
+
+<h3><a name="demostatic">"SAPUI5 SDK Static": sapui5-sdk-static.zip</a></h3>
+<p>Extract the sapui5-sdk-static.zip file to the web server that is available at your site. Under Developer Guide -> General Information -> Release Notes you can find some information with respect to what has changed in the current SAPUI5 version 1.12.1 compared to other older SAPUI5 versions. This is a short description of the most important content that is provided:</p>
+<p><tt>/resources: </tt></p>
+<p>Provides the JavaScript framework and control resource files required for setup, development, and debugging when working with the SAPUI5 user interface technology. The folder for example also contains the sap-ui-core-all.js file which is used in the sample included at the bottom of the page.</p>
+<p><tt>/test-resources: </tt></p>
+<p>The test resources are the basis of the included test suite which is an add-on to the SAPUI5 feature set and which allows you to exercise lively on the control examples, and to reuse examples, or parts of them, where required.</p>
+<p><tt>index.html:</tt></p>
+<p>Informs about the demo kit and provides basic information of the platform. The file is also preconfigured to be used as starting point for the whole bundle.</p>
+<p>To install the sapui5-sdk-static.zip file on an Apache HTTPD server, the steps are as following:</p>
+<ol>
+<li>Download the Apache HTTPD server.</li>
+<li>Go into the Apache HTTPD server directory on your computer.</li>
+<li>Go into the /htdocs folder.</li>
+<li>Extract the zip file into folder /sapui5.</li>
+<li>Generally, you would use port 8080 to let the demo kit run in the browser.</li>
+</ol>
+<p>To install the sapui5-sdk-static.zip file on Microsoft IIS, proceed steps as following:</p>
+<ol>
+<li>Install Microsoft IIS by using the Windows Program Manager. Activate the Microsoft Internet Information Services.</li>
+<li>Open the Microsoft IIS /inetpub directory.</li>
+<li>Open the Microsoft IIS /wwwroot folder.</li>
+<li>Extract the zip file to a folder /sapui5.</li>
+<li>For typical installations you would use port 80 to let the application run.</li>
+</ol>
+
+<h3><a name="demo">"SAPUI5 SDK"</a>: sapui5-sdk.war</h3> 
+<p>The demo kit web application archive file contains the same application as the static version described above. You would use this demo kit package file alternatively to the sapui5-sdk-static.zip file for direct deployment on a Java Web Container. As an additional feature a search is available with this version as opposed to the static version. You directly deploy the current package file to the Java Web Container which is available at your site, for example Apache Tomcat; we recommend the newest 6.x version. You do not have to extract the web archive file before.</p>
+<p>If you wanted to deploy the .war file to Apache Tomcat for example, you would follow these steps:</p>
+<ol>
+<li>Stop the Tomcat server if it has been started and is running.</li>
+<li>Delete existing deployments, if there are any. The relevant folder for deployments is TOMCAT_HOME/webapps.</li>
+<li>Copy the sapui5-sdk.war file to the /webapps directory.</li>
+<li>Start the server again.</li>
+<li>You do not have to adapt the server.xml file, this is done automatically.</li>  
+</ol>
+<h3><a name="rtstatic">SAPUI5 runtime static : sapui5-static.zip</a></h3>
+<p>The SAPUI5 static bundle consists of static web content only: HTML, JavaScript files, style sheets, and images. It does not include any active components like Servlets which would for example require a running Java web container. The SAPUI5 static bundle contains the SAPUI5 core library, and a set of basic UI libraries.</p>
+<p>Using a common standard web server plus the content of the static SAPUI5 runtime .zip file allows you to test and try and find out the SAPUI5 features and functions. The sapui5-static.zip file contains analogous to the demo kit zip file resources and test resources, as well as an index.html for your convenience.</p>
+
+<p>For the installation of this static file version, follow the steps as they are described for <a href="#demostatic">sapui5-sdk-static.zip.</a></p>
+
+<h3><a name="rt">SAPUI5 runtime: sapui5.war</a></h3>
+<p>This archive can be used for direct deployment on a Java Web Container like Apache Tomcat. It contains the same client side runtime parts as the static runtime version. However, it also includes some optional Java server components which optimize the resource loading mechanisms if present. An example are the language dependent resource bundles. If a required language bundle doesn't exist, the static version without the server component will have to issue several requests before a fallback file is found. The .war version will resolve this on the server within the first request.</p>
+
+<p>For information on how to proceed with the runtime package, check the information which is available for the <a href="#demo">SAPUI5 SDK web archive</a>.
+
+<h3><a name="hwcrt">SAPUI5 runtime for mobile hybrid web containers: sapui5-mobile-static.zip</a></h3>
+
+<p>SAPUI5 Mobile apps can be built either as web applications which are loaded from a certain URL, or as so-called "Hybrid Apps" which have a native app wrapper, but the entire user interface consists of a HTML viewer where the normal SAPUI5 content is displayed.</p>
+<p>Both have advantages and disadvantages. Hybrid apps can be published in App Stores, the whole application code and the UI5 library files can also be embedded into this Hybrid container, so these files are rather installed once than downloaded on every application start. On the other hand this means that the total library size matters because every user has to install everything. In normal web applications the library deployed on the server may be huge, but only the needed parts are downloaded at runtime.</p>
+<p>For these hybrid apps, the static package of SAPUI5 Mobile can be used to include all needed SAPUI5 resources, but still have a relatively small total library size because all test pages etc. are removed from this special package. The file is sapui5-mobile-static.zip.</p>
+<p>It contains the debug version of all Javascript files as well as the optimized and minified one (which are used by default) so it can be used for productive as well as debug purposes.</p>
+<p>To use this package e.g. in Sybase's Hybrid Web Container or Adobe's PhoneGap, it just needs to be unzipped inside the respective resource location of the app development project. The Hybrid Web Container/PhoneGap build will then include the files and make them available at runtime.</p>
+
+<h4>Optimizing the package size: Delete unneeded files</h4>
+<p>While the above file is already pretty small (and small enough for inclusion in hybrid apps), the size can be further reduced and optimized for specific applications by deleting unneeded files:</p>
+<ul>
+<li>In /resources you can delete either sap-ui-core-nojQuery.js if you reference UI5 normally, or sap-ui-core.js if you reference the nojQuery version and reference jQuery separately (e.g. because you run in a Sybase Hybrid Container).</li>
+<li>In /resources/sap you can delete the entire makit folder when you do not need the makit charts.</li>
+<li>In /resources/sap/ui/thirdparty you can delete the entire jquery and jqueryui folders when you use the normal sap-ui-core.js file for bootstrap (they may only be needed when using the sap-ui-core-nojQuery.js script, and even then you may have another copy of jQuery available, so that folder can still be deleted).</li>
+<li>In /resources/sap/ui/core/themes and in /resources/sap/m/themes you can delete the "base" and the "sap_bluecrystal" folder (unless you are using this experimental theme, then you can delete "base" and "sap_mvi")</li>
+</ul>
+<p>Of all JavaScript files there is an optimized and a "-dbg" version of each file, so when deleting the above files make sure you always delete both versions of them! 
+If you do not want to allow easy debugging and you want to go for minimum installation size, also ALL *-dbg.js files can be deleted from the "-opt-static" package.</p>
+
+<p>Further files can be deleted, but the size reduction is limited and finding out what is not required gets increasingly difficult.</p>
+
+<h3>Sample application: getting-started-sample.war</h3>
+<p>Importing the content of the getting-started-sample file, which you have extracted before or deployed directly to your web container into an Eclipse IDE (for prerequisites and IDE version, check the prerequisites for the <a href="#tools">SAPUI5 Application Development Tools</a>), you get a sophisticated SAPUI5 Application example which you can adapt for your purposes. The SAPUI5 Application Project is preconfigured in a way that you can directly let it run on your web server; enhance it with the SAPUI5 controls that fit for your application needs. The getting-started-sample file provides pre-thought steps which are already implemented for your convenience. For example, you can directly use the library packages as they are available in WebContent -> WEB-INF -> lib. The programming model foresees that it is sufficient to have the Java archive files available in the SAPUI5 Application Project, it is not necessary to extract these before using them.</p>
+
+
+<p>For just having a glance what a SAPUI5 Application looks like in the browser, you also could deploy it to your Web container only, and let it run via http://localhost:8080/getting-started-sample.</p> 
+
+<h3><a name="tools">SAPUI5 Application Development Tool: tools-updatesite </a></h3>
+
+<h4>Prerequisites</h4>
+<p>SAPUI5 Tools run on the following supported operating systems: Microsoft Windows XP, Microsoft Windows Vista and Microsoft Windows 7. As Java Runtime, version JRE 1.6, 32/64-Bit is required. Use the same runtime version for the open source toolset for development, Eclipse. Download the recommended JEE bundle version Indigo 3.7 from an Eclipse download site. Ensure that the feature folders which are listed in the table below are available in the Eclipse version you are installing. If not, perform a post-installation task by downloading the feature plug-ins manually. In the Install New Software dialog make sure to uncheck Group items by category. Otherwise it might happen that not all required features are found. You can use the filter to locate the features quickly. </p>
+
+<table>
+<tr>
+<td>
+Name
+</td>
+<td>
+Feature Plugin
+</td>
+<td>
+Minimal Version
+</td>
+<td>
+Available in Eclipse JEE Bundle
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Platform
+</td>
+<td>
+org.eclipse.platform
+</td>
+<td>
+3.5.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Faceted Project Framework
+</td>
+<td>
+org.eclipse.wst.common.fproj
+</td>
+<td>
+3.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Faceted Project Framework JDT Enablement
+</td>
+<td>
+org.eclipse.jst.common.fproj.enablement.jdt
+</td>
+<td>
+3.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Java Development Tools
+</td>
+<td>
+org.eclipse.jdt
+</td>
+<td>
+3.5.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Java EE Developer Tools
+</td>
+<td>
+org.eclipse.jst.enterprise_ui.feature
+</td>
+<td>
+3.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Eclipse Java Web Developer Tools / JST Web UI
+</td>
+<td>
+org.eclipse.jst.web_ui.feature
+</td>
+<td>
+3.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+EMF - Eclipse Modeling Framework Runtime and Tools
+</td>
+<td>
+org.eclipse.emf
+</td>
+<td>
+2.0.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+Graphical Editing Framework GEF
+</td>
+<td>
+org.eclipse.gef
+</td>
+<td>
+3.5.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+JavaScript Development Tools
+</td>
+<td>
+org.eclipse.wst.jsdt.feature
+</td>
+<td>
+1.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+WST Common Core
+</td>
+<td>
+org.eclipse.wst.common_core.feature
+</td>
+<td>
+3.1.0
+</td>
+<td>
+yes
+</td>
+</tr>
+<tr>
+<td> 
+(valid for Juno version) Jetty - Core: servlets and webapps
+</td>
+<td>
+org.eclipse.jetty.core
+</td>
+<td>
+8.0.0
+</td>
+<td>
+no
+</td>
+</tr>
+</table>
+
+<p>Note that the Eclipse Juno 4.2 version is also supported</p>
+<h4>Content Tools Update Site</h4>
+<p>The overall structure of the tools update site folder is as following:</p>
+<p><tt>/features: </tt></p>
+<p>Contains the com.sap.ide.ui5.* and com.sap.ui5.* Java archives with runtime, controls and tools build files.</p>
+<p><tt>/plugins: </tt></p>
+<p>Contains the packages which provide the controls for UI design, as well as for example OSGI-enabling files for SAPUI5.</p>
+<p><tt>artifacts.jar:</tt></p>
+<p>In artifacts.xml, the artifact repository for the SDK with the required parameters is defined.</p>
+<p><tt>content.jar: </tt></p>
+<p>In the content.xml file, the metadata repository for the SDK with the required parameters is defined.</p>
+<h4>Installation SAPUI5 Tools</h4>
+<p>Only a few installation steps are required to get the full functionality of the features and functions. Note that when you are installing the SAPUI5 Tools via the tools update site available with this download, you also automatically get the SAPUI5 Core Runtime via the installable units.</p>
+<ol>
+<li>Extract the HTML5Evaluation_complete.zip to any server location.</li>
+<li>Start the Eclipse environment. To install the features and functions, choose Help -> Install New Software... </li>
+<li>Click Add ... (next to the Work with:  input field). </li>
+<li>Click Local ... (next to the Name:  input field).</li>
+<li>Navigate to the local update site location, and choose it as update source. Mark all plugins and features that shall be installed. We recommend, for SAPUI5 Application Development purposes, to generally choose all installation options that are available. Keep the Contact all update sites during install to find required software checkbox at the bottom of this dialog selected. Finish the installation process. </li>
+<li>Restart Eclipse.</li>
+<li>To validate your installation, try to create a new SAPUI5 Application Project via Eclipse menu File -> New -> Other.</li>
+</ol>
+
+
+		<div>	
+			<h2>Quickstart: An easy SAPUI5 application</h2>
+			<p>In the folder of the downloaded runtime, open the index.html page for first instructions</p>  
+			<p>Just paste the following into a new HTML file on your web server with the SAPUI5 runtime.</p>
+			<pre>
+&lt;!DOCTYPE html>
+&lt;html>&lt;head>
+    &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    &lt;title>Hello World&lt;/title>
+
+    &lt;script id='sap-ui-bootstrap' type='text/javascript'
+        src='/sapui5/resources/sap-ui-core-all.js'
+        data-sap-ui-theme='sap_goldreflection'
+        data-sap-ui-libs='sap.ui.commons'>&lt;/script> 
+
+&lt;script>
+    var btn = new sap.ui.commons.Button({
+        text:'Hello World',
+        press:function(){alert('Hello!')}
+    });
+    btn.placeAt('content');
+&lt;/script>
+
+&lt;/head>
+&lt;body class='sapUiBody'>
+    &lt;div id='content'>&lt;/div>
+&lt;/body>
+&lt;/html></pre>
+	 		</div>
+		</div>
+		</div>
+		<div id="footer"> &copy; 2009-2013 SAP AG, Confidential, Do not distribute without permission.</div>
+	</body>
+</html>
+ 
+    
+   
+ 
+
+
+
+   
+   
+ 
+ 
+			
